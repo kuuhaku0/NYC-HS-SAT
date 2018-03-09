@@ -1,0 +1,910 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		00B190DC9E64B3EF94F8644234B0332D /* Pods-NYC HS SATUITests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = AFC60BDBA2BA77A899BA2174AA17A00E /* Pods-NYC HS SATUITests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		073908392F85B77499187FB0AC79D92C /* Pods-NYC HS SAT-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9187D8A62D13515E13BE1D8BE62CFB17 /* Pods-NYC HS SAT-dummy.m */; };
+		162D69DD8F5AB8B40F3B7ECB07B51D55 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54F9A0E952988935C32EDDB1429D7133 /* Foundation.framework */; };
+		2356BF24FB3F4676A7B5097B30363135 /* Pods-NYC HS SATTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 72B826A740E28223291CC45F5C8CE8F4 /* Pods-NYC HS SATTests-dummy.m */; };
+		361997D87B26D6CF48310B14E52F6534 /* Pods-NYC HS SATUITests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EDACCC71591185BEB08DD2A87056267 /* Pods-NYC HS SATUITests-dummy.m */; };
+		43C7F0E3A633A2158059A7AC425C12B9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54F9A0E952988935C32EDDB1429D7133 /* Foundation.framework */; };
+		4B3658014D88B9B9D950BEABB6C1933E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54F9A0E952988935C32EDDB1429D7133 /* Foundation.framework */; };
+		4F9E7C01C0C3769BDC0C0CBEA51322BA /* SVProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = EB951A2AFCBDCFE1B3C8CAA45738F432 /* SVProgressHUD.m */; };
+		537AFEC529F975DE70C203E0AF04F94E /* SVProgressHUD-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A8D39DF6CCC0BF2A43A2826E78E87405 /* SVProgressHUD-dummy.m */; };
+		57E7AAE8119A82F53ADDD93E4CAC8583 /* SVProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 1A2B9DE3366B1C5305DC7E5784E16F95 /* SVProgressHUD.bundle */; };
+		57E8351E7E51E28A337EC18FD39C5A3B /* SVIndefiniteAnimatedView.m in Sources */ = {isa = PBXBuildFile; fileRef = AAF517DE80F33E8C6D4730D8C76266A8 /* SVIndefiniteAnimatedView.m */; };
+		60DB46051A357CB9D5EAB27D48E1F2F4 /* SVProgressAnimatedView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F3E5DB554589C543F1B5859BB28A8CC /* SVProgressAnimatedView.m */; };
+		6B8ECCC223A207B635B76546C0845F46 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC2770B482BFE91273C8560623F1422C /* QuartzCore.framework */; };
+		78F2715EF7C22E8D8E503C675DC983DB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54F9A0E952988935C32EDDB1429D7133 /* Foundation.framework */; };
+		804D64D4BE0065DE92E47CFB36004866 /* SVProgressHUD-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 170E247DAABF893060C8B9D458B792BA /* SVProgressHUD-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		824C1A32F6BD742818391902040918FA /* Pods-NYC HS SAT-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 7489D2F4493C77B86CC464D6D2E904F7 /* Pods-NYC HS SAT-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9DC440135C5FF978910036D35F407C54 /* Pods-NYC HS SATTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 949D4234724E4CE7CF0F705044FA4012 /* Pods-NYC HS SATTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B70B88012AFE68D38262A0727B547BE1 /* SVProgressAnimatedView.h in Headers */ = {isa = PBXBuildFile; fileRef = 9E71CFC73DB55784D0519F97BA41F995 /* SVProgressAnimatedView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BC5CC385F79BD03AAB1A48538DD8174A /* SVRadialGradientLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = E6456237FB03F6CCC42CC65518735B70 /* SVRadialGradientLayer.m */; };
+		E4886D9DDD1851875ADF56085294C771 /* SVProgressHUD.h in Headers */ = {isa = PBXBuildFile; fileRef = 2CDC9F27823E18CB972FB8AFD6B120F6 /* SVProgressHUD.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F9F9B7B05F1ACE39A16AFB5C9C29D1C4 /* SVRadialGradientLayer.h in Headers */ = {isa = PBXBuildFile; fileRef = 9A1296BE4DDEB09F3CF2072C7073D7B3 /* SVRadialGradientLayer.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FC3899486C6FDA6C82473C1D35BAABBB /* SVIndefiniteAnimatedView.h in Headers */ = {isa = PBXBuildFile; fileRef = C448586FB64ED635E190F6904D743930 /* SVIndefiniteAnimatedView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		BE0878575AEA7CD6726CA50404311B8B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5AC135216FEE952C188AEF6A69EC12F7;
+			remoteInfo = SVProgressHUD;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0099B1A349F5C79BFADF90D6F29AC17F /* Pods-NYC HS SATTests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-NYC HS SATTests-resources.sh"; sourceTree = "<group>"; };
+		00ADDAAB034E73B8D72A1857729769CA /* Pods-NYC HS SATTests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-NYC HS SATTests-frameworks.sh"; sourceTree = "<group>"; };
+		00FEA0E0AB7B8343E394FEF04F5C4B4C /* Pods-NYC HS SATUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-NYC HS SATUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		0FA893D116B749BAD25A5866E65DB497 /* Pods_NYC_HS_SATTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_NYC_HS_SATTests.framework; path = "Pods-NYC HS SATTests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		170E247DAABF893060C8B9D458B792BA /* SVProgressHUD-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SVProgressHUD-umbrella.h"; sourceTree = "<group>"; };
+		1A2B9DE3366B1C5305DC7E5784E16F95 /* SVProgressHUD.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = SVProgressHUD.bundle; path = SVProgressHUD/SVProgressHUD.bundle; sourceTree = "<group>"; };
+		1DD01316E6D2A74FEEBDBE19830D49E8 /* Pods-NYC HS SATTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-NYC HS SATTests.debug.xcconfig"; sourceTree = "<group>"; };
+		2679B3EC886CA1A15A8BDBCB65D66449 /* SVProgressHUD.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = SVProgressHUD.modulemap; sourceTree = "<group>"; };
+		2CDC9F27823E18CB972FB8AFD6B120F6 /* SVProgressHUD.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SVProgressHUD.h; path = SVProgressHUD/SVProgressHUD.h; sourceTree = "<group>"; };
+		35EE1CC947B687520DD4018376D5C488 /* Pods-NYC HS SAT.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-NYC HS SAT.modulemap"; sourceTree = "<group>"; };
+		3A1A61FA37BB0658C1F7C601617CBC76 /* Pods-NYC HS SATTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-NYC HS SATTests-acknowledgements.plist"; sourceTree = "<group>"; };
+		40B548482B9D4C955DC00832F05342D7 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		45345F371186FC1299293B470351C236 /* SVProgressHUD.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SVProgressHUD.xcconfig; sourceTree = "<group>"; };
+		4B7628F4CD6551DA8D13D0B7A5F739F5 /* Pods-NYC HS SAT-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-NYC HS SAT-frameworks.sh"; sourceTree = "<group>"; };
+		54F9A0E952988935C32EDDB1429D7133 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		5636B1A37A7ABFBEE5D618BA6B9E9EDD /* Pods-NYC HS SATUITests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-NYC HS SATUITests-frameworks.sh"; sourceTree = "<group>"; };
+		584576F5DCFE222941738FD769F5DE6A /* SVProgressHUD.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SVProgressHUD.framework; path = SVProgressHUD.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		58E8A76B96BE827B580AB769C8A6BC47 /* Pods-NYC HS SATUITests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-NYC HS SATUITests.modulemap"; sourceTree = "<group>"; };
+		5EDACCC71591185BEB08DD2A87056267 /* Pods-NYC HS SATUITests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-NYC HS SATUITests-dummy.m"; sourceTree = "<group>"; };
+		6849FA8044D15232BF60EC8AF0510E8F /* Pods-NYC HS SAT-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-NYC HS SAT-resources.sh"; sourceTree = "<group>"; };
+		6A5563A9D30950C50EC15C08E973265D /* Pods-NYC HS SATUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-NYC HS SATUITests.release.xcconfig"; sourceTree = "<group>"; };
+		72B826A740E28223291CC45F5C8CE8F4 /* Pods-NYC HS SATTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-NYC HS SATTests-dummy.m"; sourceTree = "<group>"; };
+		7489D2F4493C77B86CC464D6D2E904F7 /* Pods-NYC HS SAT-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-NYC HS SAT-umbrella.h"; sourceTree = "<group>"; };
+		78647B3F71522267D7BECC39FA78680B /* Pods-NYC HS SATTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-NYC HS SATTests.release.xcconfig"; sourceTree = "<group>"; };
+		78DF1F1E9A7662EC259AF5ED3B3F8779 /* Pods-NYC HS SAT-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-NYC HS SAT-acknowledgements.markdown"; sourceTree = "<group>"; };
+		7CAFC44F69DF24472D97E33F9821567D /* Pods-NYC HS SATTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-NYC HS SATTests.modulemap"; sourceTree = "<group>"; };
+		846FF6E84D9D7B9F98F83799C3D87361 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8C103614C93D188BD2794CF063784732 /* Pods_NYC_HS_SAT.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_NYC_HS_SAT.framework; path = "Pods-NYC HS SAT.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9187D8A62D13515E13BE1D8BE62CFB17 /* Pods-NYC HS SAT-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-NYC HS SAT-dummy.m"; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		949D4234724E4CE7CF0F705044FA4012 /* Pods-NYC HS SATTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-NYC HS SATTests-umbrella.h"; sourceTree = "<group>"; };
+		995C5E97EF26FB60CD6F755810CFC00D /* Pods-NYC HS SAT.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-NYC HS SAT.debug.xcconfig"; sourceTree = "<group>"; };
+		9A1296BE4DDEB09F3CF2072C7073D7B3 /* SVRadialGradientLayer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SVRadialGradientLayer.h; path = SVProgressHUD/SVRadialGradientLayer.h; sourceTree = "<group>"; };
+		9BB9F0B27242B43E71668D864418B047 /* Pods-NYC HS SATUITests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-NYC HS SATUITests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		9E71CFC73DB55784D0519F97BA41F995 /* SVProgressAnimatedView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SVProgressAnimatedView.h; path = SVProgressHUD/SVProgressAnimatedView.h; sourceTree = "<group>"; };
+		9F3E5DB554589C543F1B5859BB28A8CC /* SVProgressAnimatedView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SVProgressAnimatedView.m; path = SVProgressHUD/SVProgressAnimatedView.m; sourceTree = "<group>"; };
+		A8D39DF6CCC0BF2A43A2826E78E87405 /* SVProgressHUD-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SVProgressHUD-dummy.m"; sourceTree = "<group>"; };
+		AAF517DE80F33E8C6D4730D8C76266A8 /* SVIndefiniteAnimatedView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SVIndefiniteAnimatedView.m; path = SVProgressHUD/SVIndefiniteAnimatedView.m; sourceTree = "<group>"; };
+		AFC60BDBA2BA77A899BA2174AA17A00E /* Pods-NYC HS SATUITests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-NYC HS SATUITests-umbrella.h"; sourceTree = "<group>"; };
+		B479DB46632E45BC58585B730E7F7BFC /* Pods_NYC_HS_SATUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_NYC_HS_SATUITests.framework; path = "Pods-NYC HS SATUITests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C448586FB64ED635E190F6904D743930 /* SVIndefiniteAnimatedView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SVIndefiniteAnimatedView.h; path = SVProgressHUD/SVIndefiniteAnimatedView.h; sourceTree = "<group>"; };
+		CCE0A343C71773F632D2219CE63693B0 /* Pods-NYC HS SATTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-NYC HS SATTests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		D4EAD2E8179CB23D9FE2957804E0CD31 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D6C04C9F65BB3580D5536C9CA7EE9474 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D9E0A8598E01887BB17C48B654F0E09B /* SVProgressHUD-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SVProgressHUD-prefix.pch"; sourceTree = "<group>"; };
+		E6456237FB03F6CCC42CC65518735B70 /* SVRadialGradientLayer.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SVRadialGradientLayer.m; path = SVProgressHUD/SVRadialGradientLayer.m; sourceTree = "<group>"; };
+		EB951A2AFCBDCFE1B3C8CAA45738F432 /* SVProgressHUD.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SVProgressHUD.m; path = SVProgressHUD/SVProgressHUD.m; sourceTree = "<group>"; };
+		F399E8751D01787BB4340CD3951EB154 /* Pods-NYC HS SAT-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-NYC HS SAT-acknowledgements.plist"; sourceTree = "<group>"; };
+		F52A4EEEB6020661757CA3CB1F2507AD /* Pods-NYC HS SAT.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-NYC HS SAT.release.xcconfig"; sourceTree = "<group>"; };
+		F95F219765D669A73709E7FA3B0F1D38 /* Pods-NYC HS SATUITests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-NYC HS SATUITests-acknowledgements.plist"; sourceTree = "<group>"; };
+		FC2770B482BFE91273C8560623F1422C /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = DEVELOPER_DIR; };
+		FF9D814B7200461CF50299B8EE30A0CD /* Pods-NYC HS SATUITests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-NYC HS SATUITests-resources.sh"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1166D723B27B1D17C17570D516D04223 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				78F2715EF7C22E8D8E503C675DC983DB /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		87A69E7FABD26B1161215C12BFB5FBE3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				162D69DD8F5AB8B40F3B7ECB07B51D55 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CEA4E0CFE8B968ADBCEE9FFE1EE397E9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				43C7F0E3A633A2158059A7AC425C12B9 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EE9BF82D2F5D3CD0460B5134D659C305 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4B3658014D88B9B9D950BEABB6C1933E /* Foundation.framework in Frameworks */,
+				6B8ECCC223A207B635B76546C0845F46 /* QuartzCore.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		415289D80F2E7694233232C4AB33E5DF /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				E59502468AA48CE42304D4A734A596F4 /* Pods-NYC HS SAT */,
+				FC9F7CAC77326F96FEC7824D2A8B8DD3 /* Pods-NYC HS SATTests */,
+				44D3E4C1A0FD401E29B821F9EF844E4C /* Pods-NYC HS SATUITests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		433CD3331B6C3787F473C941B61FC68F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				978007DCB56F415BE390E0F949D4D4E5 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		44D3E4C1A0FD401E29B821F9EF844E4C /* Pods-NYC HS SATUITests */ = {
+			isa = PBXGroup;
+			children = (
+				846FF6E84D9D7B9F98F83799C3D87361 /* Info.plist */,
+				58E8A76B96BE827B580AB769C8A6BC47 /* Pods-NYC HS SATUITests.modulemap */,
+				9BB9F0B27242B43E71668D864418B047 /* Pods-NYC HS SATUITests-acknowledgements.markdown */,
+				F95F219765D669A73709E7FA3B0F1D38 /* Pods-NYC HS SATUITests-acknowledgements.plist */,
+				5EDACCC71591185BEB08DD2A87056267 /* Pods-NYC HS SATUITests-dummy.m */,
+				5636B1A37A7ABFBEE5D618BA6B9E9EDD /* Pods-NYC HS SATUITests-frameworks.sh */,
+				FF9D814B7200461CF50299B8EE30A0CD /* Pods-NYC HS SATUITests-resources.sh */,
+				AFC60BDBA2BA77A899BA2174AA17A00E /* Pods-NYC HS SATUITests-umbrella.h */,
+				00FEA0E0AB7B8343E394FEF04F5C4B4C /* Pods-NYC HS SATUITests.debug.xcconfig */,
+				6A5563A9D30950C50EC15C08E973265D /* Pods-NYC HS SATUITests.release.xcconfig */,
+			);
+			name = "Pods-NYC HS SATUITests";
+			path = "Target Support Files/Pods-NYC HS SATUITests";
+			sourceTree = "<group>";
+		};
+		5831ECC27984A7B2FA00FEE7EF078CAB /* SVProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				C448586FB64ED635E190F6904D743930 /* SVIndefiniteAnimatedView.h */,
+				AAF517DE80F33E8C6D4730D8C76266A8 /* SVIndefiniteAnimatedView.m */,
+				9E71CFC73DB55784D0519F97BA41F995 /* SVProgressAnimatedView.h */,
+				9F3E5DB554589C543F1B5859BB28A8CC /* SVProgressAnimatedView.m */,
+				2CDC9F27823E18CB972FB8AFD6B120F6 /* SVProgressHUD.h */,
+				EB951A2AFCBDCFE1B3C8CAA45738F432 /* SVProgressHUD.m */,
+				9A1296BE4DDEB09F3CF2072C7073D7B3 /* SVRadialGradientLayer.h */,
+				E6456237FB03F6CCC42CC65518735B70 /* SVRadialGradientLayer.m */,
+				9E09F6F6417032AB83C07907A8D7E815 /* Resources */,
+				AA5C3E6007857393B276FDAE952A73B6 /* Support Files */,
+			);
+			name = SVProgressHUD;
+			path = SVProgressHUD;
+			sourceTree = "<group>";
+		};
+		74588D48F629C3D7E6B7E12AB83072D6 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5831ECC27984A7B2FA00FEE7EF078CAB /* SVProgressHUD */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
+				433CD3331B6C3787F473C941B61FC68F /* Frameworks */,
+				74588D48F629C3D7E6B7E12AB83072D6 /* Pods */,
+				EC6825B49D81F8FE4DADD87995718145 /* Products */,
+				415289D80F2E7694233232C4AB33E5DF /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		978007DCB56F415BE390E0F949D4D4E5 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				54F9A0E952988935C32EDDB1429D7133 /* Foundation.framework */,
+				FC2770B482BFE91273C8560623F1422C /* QuartzCore.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		9E09F6F6417032AB83C07907A8D7E815 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				1A2B9DE3366B1C5305DC7E5784E16F95 /* SVProgressHUD.bundle */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		AA5C3E6007857393B276FDAE952A73B6 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				D6C04C9F65BB3580D5536C9CA7EE9474 /* Info.plist */,
+				2679B3EC886CA1A15A8BDBCB65D66449 /* SVProgressHUD.modulemap */,
+				45345F371186FC1299293B470351C236 /* SVProgressHUD.xcconfig */,
+				A8D39DF6CCC0BF2A43A2826E78E87405 /* SVProgressHUD-dummy.m */,
+				D9E0A8598E01887BB17C48B654F0E09B /* SVProgressHUD-prefix.pch */,
+				170E247DAABF893060C8B9D458B792BA /* SVProgressHUD-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/SVProgressHUD";
+			sourceTree = "<group>";
+		};
+		E59502468AA48CE42304D4A734A596F4 /* Pods-NYC HS SAT */ = {
+			isa = PBXGroup;
+			children = (
+				40B548482B9D4C955DC00832F05342D7 /* Info.plist */,
+				35EE1CC947B687520DD4018376D5C488 /* Pods-NYC HS SAT.modulemap */,
+				78DF1F1E9A7662EC259AF5ED3B3F8779 /* Pods-NYC HS SAT-acknowledgements.markdown */,
+				F399E8751D01787BB4340CD3951EB154 /* Pods-NYC HS SAT-acknowledgements.plist */,
+				9187D8A62D13515E13BE1D8BE62CFB17 /* Pods-NYC HS SAT-dummy.m */,
+				4B7628F4CD6551DA8D13D0B7A5F739F5 /* Pods-NYC HS SAT-frameworks.sh */,
+				6849FA8044D15232BF60EC8AF0510E8F /* Pods-NYC HS SAT-resources.sh */,
+				7489D2F4493C77B86CC464D6D2E904F7 /* Pods-NYC HS SAT-umbrella.h */,
+				995C5E97EF26FB60CD6F755810CFC00D /* Pods-NYC HS SAT.debug.xcconfig */,
+				F52A4EEEB6020661757CA3CB1F2507AD /* Pods-NYC HS SAT.release.xcconfig */,
+			);
+			name = "Pods-NYC HS SAT";
+			path = "Target Support Files/Pods-NYC HS SAT";
+			sourceTree = "<group>";
+		};
+		EC6825B49D81F8FE4DADD87995718145 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8C103614C93D188BD2794CF063784732 /* Pods_NYC_HS_SAT.framework */,
+				0FA893D116B749BAD25A5866E65DB497 /* Pods_NYC_HS_SATTests.framework */,
+				B479DB46632E45BC58585B730E7F7BFC /* Pods_NYC_HS_SATUITests.framework */,
+				584576F5DCFE222941738FD769F5DE6A /* SVProgressHUD.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FC9F7CAC77326F96FEC7824D2A8B8DD3 /* Pods-NYC HS SATTests */ = {
+			isa = PBXGroup;
+			children = (
+				D4EAD2E8179CB23D9FE2957804E0CD31 /* Info.plist */,
+				7CAFC44F69DF24472D97E33F9821567D /* Pods-NYC HS SATTests.modulemap */,
+				CCE0A343C71773F632D2219CE63693B0 /* Pods-NYC HS SATTests-acknowledgements.markdown */,
+				3A1A61FA37BB0658C1F7C601617CBC76 /* Pods-NYC HS SATTests-acknowledgements.plist */,
+				72B826A740E28223291CC45F5C8CE8F4 /* Pods-NYC HS SATTests-dummy.m */,
+				00ADDAAB034E73B8D72A1857729769CA /* Pods-NYC HS SATTests-frameworks.sh */,
+				0099B1A349F5C79BFADF90D6F29AC17F /* Pods-NYC HS SATTests-resources.sh */,
+				949D4234724E4CE7CF0F705044FA4012 /* Pods-NYC HS SATTests-umbrella.h */,
+				1DD01316E6D2A74FEEBDBE19830D49E8 /* Pods-NYC HS SATTests.debug.xcconfig */,
+				78647B3F71522267D7BECC39FA78680B /* Pods-NYC HS SATTests.release.xcconfig */,
+			);
+			name = "Pods-NYC HS SATTests";
+			path = "Target Support Files/Pods-NYC HS SATTests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		646EA9E902A95797664E89847D3AE24D /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				824C1A32F6BD742818391902040918FA /* Pods-NYC HS SAT-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8102831479123E56D48A1216854647EC /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FC3899486C6FDA6C82473C1D35BAABBB /* SVIndefiniteAnimatedView.h in Headers */,
+				B70B88012AFE68D38262A0727B547BE1 /* SVProgressAnimatedView.h in Headers */,
+				804D64D4BE0065DE92E47CFB36004866 /* SVProgressHUD-umbrella.h in Headers */,
+				E4886D9DDD1851875ADF56085294C771 /* SVProgressHUD.h in Headers */,
+				F9F9B7B05F1ACE39A16AFB5C9C29D1C4 /* SVRadialGradientLayer.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CA75D5144F897A0A57440D421BE7D9C7 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				00B190DC9E64B3EF94F8644234B0332D /* Pods-NYC HS SATUITests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FD2AEE47C523368C5E1186887F97AEBA /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9DC440135C5FF978910036D35F407C54 /* Pods-NYC HS SATTests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		3A76804CA1CFDCEC9D5B9FDF80B8F997 /* Pods-NYC HS SATUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6D25EDAD90C79D3FE5EB82B2C3D1C7FC /* Build configuration list for PBXNativeTarget "Pods-NYC HS SATUITests" */;
+			buildPhases = (
+				EDD1E8CCCB53870D1D45231999AF55CE /* Sources */,
+				1166D723B27B1D17C17570D516D04223 /* Frameworks */,
+				CA75D5144F897A0A57440D421BE7D9C7 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-NYC HS SATUITests";
+			productName = "Pods-NYC HS SATUITests";
+			productReference = B479DB46632E45BC58585B730E7F7BFC /* Pods_NYC_HS_SATUITests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		5AC135216FEE952C188AEF6A69EC12F7 /* SVProgressHUD */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6D682EF34EEF903A154F9BA5B6440DEB /* Build configuration list for PBXNativeTarget "SVProgressHUD" */;
+			buildPhases = (
+				4EE593D56D67418A23CD2856387CADAC /* Sources */,
+				EE9BF82D2F5D3CD0460B5134D659C305 /* Frameworks */,
+				8102831479123E56D48A1216854647EC /* Headers */,
+				02BE8E3BDC88D30DC7EE081EEE6BA9C4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SVProgressHUD;
+			productName = SVProgressHUD;
+			productReference = 584576F5DCFE222941738FD769F5DE6A /* SVProgressHUD.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		5F982F04D1B4A30A61ABA07E59E8F0B0 /* Pods-NYC HS SAT */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EDC0CC5988DC3D722C6B285B8FED82BE /* Build configuration list for PBXNativeTarget "Pods-NYC HS SAT" */;
+			buildPhases = (
+				34A05363C7E731CE3C2A090F28FF5238 /* Sources */,
+				CEA4E0CFE8B968ADBCEE9FFE1EE397E9 /* Frameworks */,
+				646EA9E902A95797664E89847D3AE24D /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E48AB73D0B524FE685425CF204906375 /* PBXTargetDependency */,
+			);
+			name = "Pods-NYC HS SAT";
+			productName = "Pods-NYC HS SAT";
+			productReference = 8C103614C93D188BD2794CF063784732 /* Pods_NYC_HS_SAT.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		8E04D13881DF2C718A304EF19FD3068A /* Pods-NYC HS SATTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0A3070EE0D05B198202F688B0B1C5E02 /* Build configuration list for PBXNativeTarget "Pods-NYC HS SATTests" */;
+			buildPhases = (
+				FC0E3D032A09740215CACBC8621921E4 /* Sources */,
+				87A69E7FABD26B1161215C12BFB5FBE3 /* Frameworks */,
+				FD2AEE47C523368C5E1186887F97AEBA /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-NYC HS SATTests";
+			productName = "Pods-NYC HS SATTests";
+			productReference = 0FA893D116B749BAD25A5866E65DB497 /* Pods_NYC_HS_SATTests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0700;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = EC6825B49D81F8FE4DADD87995718145 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5F982F04D1B4A30A61ABA07E59E8F0B0 /* Pods-NYC HS SAT */,
+				8E04D13881DF2C718A304EF19FD3068A /* Pods-NYC HS SATTests */,
+				3A76804CA1CFDCEC9D5B9FDF80B8F997 /* Pods-NYC HS SATUITests */,
+				5AC135216FEE952C188AEF6A69EC12F7 /* SVProgressHUD */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		02BE8E3BDC88D30DC7EE081EEE6BA9C4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				57E7AAE8119A82F53ADDD93E4CAC8583 /* SVProgressHUD.bundle in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		34A05363C7E731CE3C2A090F28FF5238 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				073908392F85B77499187FB0AC79D92C /* Pods-NYC HS SAT-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4EE593D56D67418A23CD2856387CADAC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				57E8351E7E51E28A337EC18FD39C5A3B /* SVIndefiniteAnimatedView.m in Sources */,
+				60DB46051A357CB9D5EAB27D48E1F2F4 /* SVProgressAnimatedView.m in Sources */,
+				537AFEC529F975DE70C203E0AF04F94E /* SVProgressHUD-dummy.m in Sources */,
+				4F9E7C01C0C3769BDC0C0CBEA51322BA /* SVProgressHUD.m in Sources */,
+				BC5CC385F79BD03AAB1A48538DD8174A /* SVRadialGradientLayer.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EDD1E8CCCB53870D1D45231999AF55CE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				361997D87B26D6CF48310B14E52F6534 /* Pods-NYC HS SATUITests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FC0E3D032A09740215CACBC8621921E4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2356BF24FB3F4676A7B5097B30363135 /* Pods-NYC HS SATTests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		E48AB73D0B524FE685425CF204906375 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SVProgressHUD;
+			target = 5AC135216FEE952C188AEF6A69EC12F7 /* SVProgressHUD */;
+			targetProxy = BE0878575AEA7CD6726CA50404311B8B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		44A2D16EA90D84C21EACA71081FFED13 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 78647B3F71522267D7BECC39FA78680B /* Pods-NYC HS SATTests.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-NYC HS SATTests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-NYC HS SATTests/Pods-NYC HS SATTests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_NYC_HS_SATTests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		44C8FD658EC4882CDE3A093F2CF54381 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 995C5E97EF26FB60CD6F755810CFC00D /* Pods-NYC HS SAT.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-NYC HS SAT/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-NYC HS SAT/Pods-NYC HS SAT.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_NYC_HS_SAT;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		6F9224530522DD3C735EC96CF142642E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		9B9D3D3E7BAD5023AB1103760A96B6AF /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6A5563A9D30950C50EC15C08E973265D /* Pods-NYC HS SATUITests.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-NYC HS SATUITests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-NYC HS SATUITests/Pods-NYC HS SATUITests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_NYC_HS_SATUITests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		A2F1D6F2EC20F6F65580D767CA883E66 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F52A4EEEB6020661757CA3CB1F2507AD /* Pods-NYC HS SAT.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-NYC HS SAT/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-NYC HS SAT/Pods-NYC HS SAT.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_NYC_HS_SAT;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		B57951D085A1B98A97F8A1062A5E5C5B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		BAB9CACF31B009604F81A4742FFD0767 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 45345F371186FC1299293B470351C236 /* SVProgressHUD.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/SVProgressHUD/SVProgressHUD-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SVProgressHUD/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/SVProgressHUD/SVProgressHUD.modulemap";
+				PRODUCT_NAME = SVProgressHUD;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		CD1F54F2E02E5A761BA7084D9272067D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1DD01316E6D2A74FEEBDBE19830D49E8 /* Pods-NYC HS SATTests.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-NYC HS SATTests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-NYC HS SATTests/Pods-NYC HS SATTests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_NYC_HS_SATTests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		D4AAF3B9D6720232D275716FC157D4CA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 45345F371186FC1299293B470351C236 /* SVProgressHUD.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/SVProgressHUD/SVProgressHUD-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SVProgressHUD/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/SVProgressHUD/SVProgressHUD.modulemap";
+				PRODUCT_NAME = SVProgressHUD;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		F892146DD8DB73C0BFA7FF9226AB7F91 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 00FEA0E0AB7B8343E394FEF04F5C4B4C /* Pods-NYC HS SATUITests.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-NYC HS SATUITests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-NYC HS SATUITests/Pods-NYC HS SATUITests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_NYC_HS_SATUITests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0A3070EE0D05B198202F688B0B1C5E02 /* Build configuration list for PBXNativeTarget "Pods-NYC HS SATTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CD1F54F2E02E5A761BA7084D9272067D /* Debug */,
+				44A2D16EA90D84C21EACA71081FFED13 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B57951D085A1B98A97F8A1062A5E5C5B /* Debug */,
+				6F9224530522DD3C735EC96CF142642E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6D25EDAD90C79D3FE5EB82B2C3D1C7FC /* Build configuration list for PBXNativeTarget "Pods-NYC HS SATUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F892146DD8DB73C0BFA7FF9226AB7F91 /* Debug */,
+				9B9D3D3E7BAD5023AB1103760A96B6AF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6D682EF34EEF903A154F9BA5B6440DEB /* Build configuration list for PBXNativeTarget "SVProgressHUD" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D4AAF3B9D6720232D275716FC157D4CA /* Debug */,
+				BAB9CACF31B009604F81A4742FFD0767 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EDC0CC5988DC3D722C6B285B8FED82BE /* Build configuration list for PBXNativeTarget "Pods-NYC HS SAT" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				44C8FD658EC4882CDE3A093F2CF54381 /* Debug */,
+				A2F1D6F2EC20F6F65580D767CA883E66 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}

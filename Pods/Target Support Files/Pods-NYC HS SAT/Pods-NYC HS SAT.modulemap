@@ -1,0 +1,6 @@
+framework module Pods_NYC_HS_SAT {
+  umbrella header "Pods-NYC HS SAT-umbrella.h"
+
+  export *
+  module * { export * }
+}
