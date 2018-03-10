@@ -13,11 +13,15 @@ class NYCHighSchoolsViewController: UIViewController {
     // MARK: - IBOutlets
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var highSchoolsTableView: UITableView!
+    @IBAction func reload(_ sender: UIButton) {
+        highSchoolsTableView?.reloadData()
+    }
     
     // Trigger for getting data for the selected borough
-    public var selectedBorough = "" {
+    public var selectedBorough = ("", "") {
         didSet {
-            getAllHighSchools(from: selectedBorough)
+            navigationItem.title = selectedBorough.1
+            getAllHighSchools(from: selectedBorough.0)
         }
     }
     
@@ -31,15 +35,17 @@ class NYCHighSchoolsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Set delegate and dataSource
-        searchBar.delegate = self
-        
-        highSchoolsTableView.delegate = self
         highSchoolsTableView.dataSource = self
+        highSchoolsTableView.delegate = self
+        
+        searchBar.delegate = self
+        highSchoolsTableView?.reloadData()
     }
 
     private func getAllHighSchools(from borough: String) {
         let completion: ([NYCHighSchool]) -> Void = {(onlineHSInBoro) in
             self.nycHighSchools = onlineHSInBoro
+            self.highSchoolsTableView?.reloadData()
         }
         HighSchoolsAPIClient.manager.getAllSchools(from: borough,
                                                    completionHandler: completion,
@@ -50,14 +56,16 @@ class NYCHighSchoolsViewController: UIViewController {
 // Mark: - TableView DataSource Methods
 extension NYCHighSchoolsViewController: UITableViewDataSource {
     
-    internal func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return nycHighSchools.count
     }
     
-    internal func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = highSchoolsTableView.dequeueReusableCell(withIdentifier: "HSCell", for: indexPath)
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "HSCell", for: indexPath)
         let highSchool = nycHighSchools[indexPath.row]
+
         cell.textLabel?.text = highSchool.school_name
+        cell.detailTextLabel?.text = highSchool.dbn
         return cell
     }
 }
