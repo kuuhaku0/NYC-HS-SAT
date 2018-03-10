@@ -6,11 +6,15 @@
 //
 
 import UIKit
+import SVProgressHUD
 
 class BoroughTableViewController: UITableViewController {
-    
     // Data Source for tableView
-    private let boroughs = [("Manhattan", #imageLiteral(resourceName: "Manhattan"), "M"), ("Brooklyn", #imageLiteral(resourceName: "Brooklyn"), "K"), ("Queens", #imageLiteral(resourceName: "Queens"), "Q"), ("Bronx", #imageLiteral(resourceName: "Bronx"), "X"), ("Staten Island", #imageLiteral(resourceName: "Staten Island"), "R")]
+    private let boroughs = [("Manhattan", #imageLiteral(resourceName: "Manhattan"), "M"),
+                            ("Brooklyn", #imageLiteral(resourceName: "Brooklyn"), "K"),
+                            ("Queens", #imageLiteral(resourceName: "Queens"), "Q"),
+                            ("Bronx", #imageLiteral(resourceName: "Bronx"), "X"),
+                            ("Staten Island", #imageLiteral(resourceName: "Staten Island"), "R")]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,6 +38,7 @@ class BoroughTableViewController: UITableViewController {
         return view.safeAreaLayoutGuide.layoutFrame.height / CGFloat(boroughs.count)
     }
     
+    // Prepare for segue, passing the selected Boro Code and Name
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let indexPath = tableView.indexPathForSelectedRow else {
             return
