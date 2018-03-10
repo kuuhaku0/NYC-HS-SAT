@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="FY0-vM-CF0">
+    <device id="retina5_9" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--High Schools View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="NYCHighSchoolsViewController" customModule="NYC_HS_SAT" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="724"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" searchBarStyle="minimal" showsSearchResultsButton="YES" showsCancelButton="YES" showsScopeBar="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lxE-Tw-nhg">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <scopeButtonTitles>
+                                    <string>School Name</string>
+                                    <string>District Borough Number</string>
+                                </scopeButtonTitles>
+                            </searchBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" keyboardDismissMode="interactive" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Ift-KF-6Oe">
+                                <rect key="frame" x="0.0" y="100" width="375" height="590"/>
+                                <color key="backgroundColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="HSCell" textLabel="CCb-er-uQT" detailTextLabel="UBw-zg-vEb" style="IBUITableViewCellStyleSubtitle" id="31e-eL-UeV">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="31e-eL-UeV" id="kWT-dH-HR2">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.666666666666664"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="CCb-er-uQT">
+                                                    <rect key="frame" x="15" y="5" width="33.333333333333336" height="20.333333333333332"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="UBw-zg-vEb">
+                                                    <rect key="frame" x="14.999999999999996" y="25.333333333333332" width="43.666666666666664" height="14.333333333333334"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="lxE-Tw-nhg" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="DhZ-Dv-QWd"/>
+                            <constraint firstItem="Ift-KF-6Oe" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="L8M-OD-w1z"/>
+                            <constraint firstItem="lxE-Tw-nhg" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="as2-dV-r2U"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Ift-KF-6Oe" secondAttribute="trailing" id="ldZ-nc-6Z6"/>
+                            <constraint firstItem="Ift-KF-6Oe" firstAttribute="top" secondItem="lxE-Tw-nhg" secondAttribute="bottom" id="nAq-Kx-CaI"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Ift-KF-6Oe" secondAttribute="bottom" id="nMF-GY-fj0"/>
+                            <constraint firstItem="lxE-Tw-nhg" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="nVP-L9-T9u"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="highSchoolsTableView" destination="Ift-KF-6Oe" id="ckj-C2-f14"/>
+                        <outlet property="searchBar" destination="lxE-Tw-nhg" id="KCg-Xc-sdm"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="343" y="37"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Lqe-vz-4AZ">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="FY0-vM-CF0" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="bSm-Wj-YSy">
+                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="0Lb-dw-qn4" kind="relationship" relationship="rootViewController" id="hr1-Bp-VKW"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZZs-r6-qAX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1367" y="37"/>
+        </scene>
+        <!--Select Borough of High School-->
+        <scene sceneID="OR6-DQ-6Xp">
+            <objects>
+                <tableViewController id="0Lb-dw-qn4" customClass="BoroughTableViewController" customModule="NYC_HS_SAT" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" bouncesZoom="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Jmt-FZ-CDO">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="724"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="BoroughCell" rowHeight="182" id="ycU-ID-iIK" customClass="BoroughTableViewCell" customModule="NYC_HS_SAT" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="182"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ycU-ID-iIK" id="Jti-G5-CxE">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="182"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.90000000000000002" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="lUs-dP-mwz">
+                                            <rect key="frame" x="0.0" y="6" width="375" height="176"/>
+                                        </imageView>
+                                        <view alpha="0.14999999999999999" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="c2Z-Cy-ks5">
+                                            <rect key="frame" x="0.0" y="6" width="375" height="176"/>
+                                            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </view>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Manhattan" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CZl-hR-3yd">
+                                            <rect key="frame" x="16" y="123" width="335" height="48"/>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="40"/>
+                                            <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="lUs-dP-mwz" firstAttribute="top" secondItem="Jti-G5-CxE" secondAttribute="top" constant="6" id="28b-0a-kUm"/>
+                                        <constraint firstItem="c2Z-Cy-ks5" firstAttribute="top" secondItem="lUs-dP-mwz" secondAttribute="top" id="9aF-kw-gE7"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="CZl-hR-3yd" secondAttribute="trailing" constant="8" id="CQc-Vx-6Ik"/>
+                                        <constraint firstItem="CZl-hR-3yd" firstAttribute="leading" secondItem="Jti-G5-CxE" secondAttribute="leadingMargin" id="US6-CP-mHH"/>
+                                        <constraint firstItem="c2Z-Cy-ks5" firstAttribute="leading" secondItem="lUs-dP-mwz" secondAttribute="leading" id="Uzd-bk-Zrz"/>
+                                        <constraint firstItem="c2Z-Cy-ks5" firstAttribute="bottom" secondItem="lUs-dP-mwz" secondAttribute="bottom" id="ZYm-1u-LZm"/>
+                                        <constraint firstAttribute="trailing" secondItem="lUs-dP-mwz" secondAttribute="trailing" id="ZsY-uh-aCP"/>
+                                        <constraint firstItem="lUs-dP-mwz" firstAttribute="leading" secondItem="Jti-G5-CxE" secondAttribute="leading" id="Zw3-3L-Zm1"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="CZl-hR-3yd" secondAttribute="bottom" id="b5G-Yp-nUC"/>
+                                        <constraint firstAttribute="bottom" secondItem="lUs-dP-mwz" secondAttribute="bottom" id="b63-sE-ukc"/>
+                                        <constraint firstItem="c2Z-Cy-ks5" firstAttribute="trailing" secondItem="lUs-dP-mwz" secondAttribute="trailing" id="grB-t3-m40"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="BoroughLabel" destination="CZl-hR-3yd" id="RpD-YX-8HG"/>
+                                    <outlet property="boroughImage" destination="lUs-dP-mwz" id="m9I-F0-b0f"/>
+                                    <segue destination="BYZ-38-t0r" kind="show" identifier="HSSegue" id="phT-Hf-cJa"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="0Lb-dw-qn4" id="pfE-Fz-506"/>
+                            <outlet property="delegate" destination="0Lb-dw-qn4" id="fuc-YT-iz0"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Select Borough of High School" id="HaH-cG-nIW">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="U7o-WG-u4c"/>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mmw-0v-zBp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-514" y="37"/>
+        </scene>
+    </scenes>
+</document>

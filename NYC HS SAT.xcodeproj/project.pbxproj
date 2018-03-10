@@ -19,6 +19,10 @@
 		81A64D8A20530DE600D10CED /* NYC_HS_SATUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A64D8920530DE600D10CED /* NYC_HS_SATUITests.swift */; };
 		81A64D9820530E8200D10CED /* NetworkHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A64D9720530E8200D10CED /* NetworkHelper.swift */; };
 		81A64D9B20530FC800D10CED /* NYCHighSchool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A64D9A20530FC800D10CED /* NYCHighSchool.swift */; };
+		81A64D9D2053252C00D10CED /* SATScores.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A64D9C2053252C00D10CED /* SATScores.swift */; };
+		81A64DA420532CD600D10CED /* BoroughTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A64DA320532CD600D10CED /* BoroughTableViewController.swift */; };
+		81A64DA920532E0300D10CED /* BoroughTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A64DA820532E0300D10CED /* BoroughTableViewCell.swift */; };
+		81A64DAC205343BB00D10CED /* HighSchoolsAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A64DAB205343BB00D10CED /* HighSchoolsAPIClient.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +62,10 @@
 		81A64D8B20530DE600D10CED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		81A64D9720530E8200D10CED /* NetworkHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkHelper.swift; sourceTree = "<group>"; };
 		81A64D9A20530FC800D10CED /* NYCHighSchool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NYCHighSchool.swift; sourceTree = "<group>"; };
+		81A64D9C2053252C00D10CED /* SATScores.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SATScores.swift; sourceTree = "<group>"; };
+		81A64DA320532CD600D10CED /* BoroughTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoroughTableViewController.swift; sourceTree = "<group>"; };
+		81A64DA820532E0300D10CED /* BoroughTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoroughTableViewCell.swift; sourceTree = "<group>"; };
+		81A64DAB205343BB00D10CED /* HighSchoolsAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HighSchoolsAPIClient.swift; sourceTree = "<group>"; };
 		81B0D981F4CF5995337577BA /* Pods-NYC HS SAT.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NYC HS SAT.release.xcconfig"; path = "Pods/Target Support Files/Pods-NYC HS SAT/Pods-NYC HS SAT.release.xcconfig"; sourceTree = "<group>"; };
 		9299B24C938FA68845F16C6A /* Pods_NYC_HS_SATUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NYC_HS_SATUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A73741E5D85BCB54171359CB /* Pods-NYC HS SATUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NYC HS SATUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NYC HS SATUITests/Pods-NYC HS SATUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -118,10 +126,11 @@
 		81A64D6820530DE600D10CED /* NYC HS SAT */ = {
 			isa = PBXGroup;
 			children = (
-				81A64D9A20530FC800D10CED /* NYCHighSchool.swift */,
-				81A64D9720530E8200D10CED /* NetworkHelper.swift */,
-				81A64D6B20530DE600D10CED /* NYCHighSchoolsViewController.swift */,
-				81A64D6D20530DE600D10CED /* Main.storyboard */,
+				81A64DA720532D1700D10CED /* Services */,
+				81A64DA620532D0D00D10CED /* Models */,
+				81A64DA520532CEA00D10CED /* Storyboards */,
+				81A64DAA20532E1700D10CED /* CustomCells */,
+				81A64DA220532CA700D10CED /* ViewController */,
 				81A64D9920530E9600D10CED /* Supporting Files */,
 			);
 			path = "NYC HS SAT";
@@ -149,11 +158,54 @@
 			isa = PBXGroup;
 			children = (
 				81A64D7020530DE600D10CED /* Assets.xcassets */,
-				81A64D7220530DE600D10CED /* LaunchScreen.storyboard */,
 				81A64D7520530DE600D10CED /* Info.plist */,
 				81A64D6920530DE600D10CED /* AppDelegate.swift */,
 			);
 			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		81A64DA220532CA700D10CED /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				81A64DA320532CD600D10CED /* BoroughTableViewController.swift */,
+				81A64D6B20530DE600D10CED /* NYCHighSchoolsViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		81A64DA520532CEA00D10CED /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				81A64D6D20530DE600D10CED /* Main.storyboard */,
+				81A64D7220530DE600D10CED /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		81A64DA620532D0D00D10CED /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				81A64D9C2053252C00D10CED /* SATScores.swift */,
+				81A64D9A20530FC800D10CED /* NYCHighSchool.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		81A64DA720532D1700D10CED /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				81A64D9720530E8200D10CED /* NetworkHelper.swift */,
+				81A64DAB205343BB00D10CED /* HighSchoolsAPIClient.swift */,
+			);
+			name = Services;
+			sourceTree = "<group>";
+		};
+		81A64DAA20532E1700D10CED /* CustomCells */ = {
+			isa = PBXGroup;
+			children = (
+				81A64DA820532E0300D10CED /* BoroughTableViewCell.swift */,
+			);
+			path = CustomCells;
 			sourceTree = "<group>";
 		};
 		A713CAA9226B36C75360D78D /* Pods */ = {
@@ -473,8 +525,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				81A64D9B20530FC800D10CED /* NYCHighSchool.swift in Sources */,
+				81A64DAC205343BB00D10CED /* HighSchoolsAPIClient.swift in Sources */,
 				81A64D6C20530DE600D10CED /* NYCHighSchoolsViewController.swift in Sources */,
 				81A64D9820530E8200D10CED /* NetworkHelper.swift in Sources */,
+				81A64DA920532E0300D10CED /* BoroughTableViewCell.swift in Sources */,
+				81A64D9D2053252C00D10CED /* SATScores.swift in Sources */,
+				81A64DA420532CD600D10CED /* BoroughTableViewController.swift in Sources */,
 				81A64D6A20530DE600D10CED /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -644,7 +700,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = KSNU4DN7MY;
-				INFOPLIST_FILE = "NYC HS SAT/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/NYC HS SAT/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "basedOnTy.NYC-HS-SAT";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -660,7 +716,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = KSNU4DN7MY;
-				INFOPLIST_FILE = "NYC HS SAT/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/NYC HS SAT/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "basedOnTy.NYC-HS-SAT";
 				PRODUCT_NAME = "$(TARGET_NAME)";

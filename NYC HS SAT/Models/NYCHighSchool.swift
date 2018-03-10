@@ -9,5 +9,8 @@
 import Foundation
 
 struct NYCHighSchool: Codable {
-    
+    let dbn: String
+    let boro: String
+    let location: String
+    let school_name: String
 }
