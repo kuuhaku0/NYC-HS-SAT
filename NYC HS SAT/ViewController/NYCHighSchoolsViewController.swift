@@ -10,11 +10,12 @@ import UIKit
 import SVProgressHUD
 
 class NYCHighSchoolsViewController: UIViewController {
-    
     // MARK: - IBOutlets
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var highSchoolsTableView: UITableView!
-    
+
+    // MARK: - Properties
+    private var selectedSearchSegment = 0
     // Trigger for getting data for the selected borough
     public var selectedBorough = ("", "") {
         didSet {
@@ -34,10 +35,7 @@ class NYCHighSchoolsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Set delegate and dataSource
         highSchoolsTableView.dataSource = self
-        highSchoolsTableView.delegate = self
-        
         searchBar.delegate = self
     }
     
@@ -80,30 +78,43 @@ class NYCHighSchoolsViewController: UIViewController {
 // Mark: - TableView DataSource Methods
 extension NYCHighSchoolsViewController: UITableViewDataSource {
     
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    internal func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return filteredResults.count
     }
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    internal func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "HSCell", for: indexPath)
         let highSchool = filteredResults[indexPath.row]
 
         // result has some weird characters
-        cell.textLabel?.text = highSchool.school_name
-            .replacingOccurrences(of: "Â“47Â”", with: "")
-            .replacingOccurrences(of: "Â", with: "") //this hopefully fixes some
-        cell.detailTextLabel?.text = highSchool.dbn
+        if selectedSearchSegment == 0 {
+            cell.textLabel?.text = highSchool.school_name.removeBadFormatString() //this hopefully fixes some
+            cell.detailTextLabel?.text = highSchool.dbn
+        }
+        else {
+            cell.textLabel?.text = highSchool.dbn.removeBadFormatString()
+            cell.detailTextLabel?.text = highSchool.school_name
+        }
         return cell
     }
 }
 
-// Mark: - TableView Delegate Methods
-extension NYCHighSchoolsViewController: UITableViewDelegate {
-
-}
-
 // MARK: - SearchBar Delegate Methods
 extension NYCHighSchoolsViewController: UISearchBarDelegate {
+    internal func searchBar(_ searchBar: UISearchBar, selectedScopeButtonIndexDidChange selectedScope: Int) {
+        selectedSearchSegment = selectedScope
+        
+        // Change sort order when segment changes and search bar placeholder
+        if selectedScope == 0 { // sort school name alphabetically
+            searchBar.placeholder = "Search school name"
+            filteredResults.sort{$0.school_name < $1.school_name}
+        } else { // sort by ascending dbn
+            searchBar.placeholder = "Search DBN"
+            filteredResults.sort{$0.dbn < $1.dbn}
+        }
+        highSchoolsTableView.reloadData()
+    }
+    
     // Hide keyboard and clears search text
     internal func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
         searchBar.text = nil
@@ -117,7 +128,20 @@ extension NYCHighSchoolsViewController: UISearchBarDelegate {
                 self.highSchoolsTableView.reloadData()
             }
         } else { // Live filtering for result
-            filteredResults = nycHighSchools.filter {$0.school_name.localizedCaseInsensitiveContains(searchBar.text!)}
+            if selectedSearchSegment == 0 { // filter by school name
+                filteredResults = nycHighSchools.filter {$0.school_name.localizedCaseInsensitiveContains(searchBar.text!)}
+            } else { // filter by district borough number
+                filteredResults = nycHighSchools.filter {$0.dbn.localizedCaseInsensitiveContains(searchBar.text!)}
+            }
         }
+    }
+}
+
+extension String { // Func for removing some strings from response data
+    public func removeBadFormatString() -> String {
+        var str = self
+        str = str.replacingOccurrences(of: "Â“47Â”", with: "")
+            .replacingOccurrences(of: "Â", with: "")
+        return str
     }
 }
