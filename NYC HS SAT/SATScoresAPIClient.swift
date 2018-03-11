@@ -14,7 +14,8 @@ struct SATScoresAPIClient {
     public func getSATScore(forSchool dbn: String,
                      completionHandler: @escaping ([SATScores]) -> Void,
                      errorHandler: @escaping (Error) -> Void) {
-        let urlStr = "https://data.cityofnewyork.us/resource/734v-jeq5.json?dbn=\(dbn)"
+        let token = "9ubKuJcvrZbHBNOSLWvi1a7Ux"
+        let urlStr = "https://data.cityofnewyork.us/resource/734v-jeq5.json?dbn=\(dbn)&$$app_token=\(token)"
         let request = URLRequest(url: URL(string: urlStr)!)
 
         // Completion for NetworkHelper

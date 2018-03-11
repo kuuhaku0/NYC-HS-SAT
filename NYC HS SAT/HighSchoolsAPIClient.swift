@@ -14,10 +14,10 @@ struct HighSchoolsAPIClient {
     func getAllSchools(from borough: String,
                        completionHandler: @escaping ([NYCHighSchool]) -> Void,
                        errorHandler: @escaping (Error) -> Void) {
-        let urlStr = "https://data.cityofnewyork.us/resource/97mf-9njv.json?boro=\(borough)"
+        let token = "9ubKuJcvrZbHBNOSLWvi1a7Ux"
+        let urlStr = "https://data.cityofnewyork.us/resource/97mf-9njv.json?boro=\(borough)&$$app_token=\(token)"
         print(urlStr)
         let request = URLRequest(url: URL(string: urlStr)!)
-        
         // Closure for NetworkHelper
         let parseNYCHS: (Data) -> Void = {(data: Data) in
             do {

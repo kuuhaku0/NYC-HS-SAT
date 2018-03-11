@@ -23,8 +23,9 @@ class NYC_HS_SATTests: XCTestCase {
         super.tearDown()
     }
     
-    func testCallToNYCOpenDataSATScore() {
-        let url = URL(string: "https://data.cityofnewyork.us/resource/734v-jeq5.json")
+    func testCallToNYCOpenDataSATScore() { // SAT API
+        let token = "9ubKuJcvrZbHBNOSLWvi1a7Ux"
+        let url = URL(string: "https://data.cityofnewyork.us/resource/734v-jeq5.json?&$$app_token=\(token)")
         let promise = expectation(description: "Status code: 200")
         let dataTask = sessionUnderTest.dataTask(with: url!) { data, response, error in
             if let error = error {
@@ -44,8 +45,9 @@ class NYC_HS_SATTests: XCTestCase {
         }
     }
     
-    func testCallToNYCOpenDataAllHighSchools() {
-        let url = URL(string: "https://data.cityofnewyork.us/resource/97mf-9njv.json")
+    func testCallToNYCOpenDataAllHighSchools() { // Highschool API
+        let token = "9ubKuJcvrZbHBNOSLWvi1a7Ux"
+        let url = URL(string: "https://data.cityofnewyork.us/resource/97mf-9njv.json?&$$app_token=\(token)")
         let promise = expectation(description: "Status code: 200")
         let dataTask = sessionUnderTest.dataTask(with: url!) { data, response, error in
             if let error = error {
