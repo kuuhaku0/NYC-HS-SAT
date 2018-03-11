@@ -90,6 +90,7 @@ class HSSATDetailsViewController: UIViewController {
         }
         let error: (Error) -> Void = {(error) in
             self.showAlert(title: "Error", message: "Unable to load data, please check your network connection.")
+            SVProgressHUD.dismiss()
         }
         SATScoresAPIClient.manager.getSATScore(forSchool: school,
                                                completionHandler: completion,
