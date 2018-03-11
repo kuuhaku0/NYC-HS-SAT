@@ -10,6 +10,9 @@
 		2A596FEDCFC5E8881CA68D80 /* Pods_NYC_HS_SAT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75D228C4DE54DBEF0F40E55D /* Pods_NYC_HS_SAT.framework */; };
 		2A8F3D7F5834564206F48436 /* Pods_NYC_HS_SATUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9299B24C938FA68845F16C6A /* Pods_NYC_HS_SATUITests.framework */; };
 		3830211E8A278FF9C1B4DC4B /* Pods_NYC_HS_SATTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70DF877CEBDE6C657B12EC13 /* Pods_NYC_HS_SATTests.framework */; };
+		816C8A862054921600BB1169 /* PersistenceService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 816C8A852054921600BB1169 /* PersistenceService.swift */; };
+		816C8A88205496D700BB1169 /* SavedSchool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 816C8A87205496D700BB1169 /* SavedSchool.swift */; };
+		816C8A8A20549BAD00BB1169 /* BookmarksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 816C8A8920549BAD00BB1169 /* BookmarksViewController.swift */; };
 		81A64D6A20530DE600D10CED /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A64D6920530DE600D10CED /* AppDelegate.swift */; };
 		81A64D6C20530DE600D10CED /* NYCHighSchoolsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A64D6B20530DE600D10CED /* NYCHighSchoolsViewController.swift */; };
 		81A64D6F20530DE600D10CED /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81A64D6D20530DE600D10CED /* Main.storyboard */; };
@@ -49,6 +52,9 @@
 		68BD75F261F2A6504EE71B99 /* Pods-NYC HS SATTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NYC HS SATTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-NYC HS SATTests/Pods-NYC HS SATTests.release.xcconfig"; sourceTree = "<group>"; };
 		70DF877CEBDE6C657B12EC13 /* Pods_NYC_HS_SATTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NYC_HS_SATTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		75D228C4DE54DBEF0F40E55D /* Pods_NYC_HS_SAT.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NYC_HS_SAT.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		816C8A852054921600BB1169 /* PersistenceService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceService.swift; sourceTree = "<group>"; };
+		816C8A87205496D700BB1169 /* SavedSchool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedSchool.swift; sourceTree = "<group>"; };
+		816C8A8920549BAD00BB1169 /* BookmarksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarksViewController.swift; sourceTree = "<group>"; };
 		81A64D6620530DE600D10CED /* NYC HS SAT.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "NYC HS SAT.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		81A64D6920530DE600D10CED /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		81A64D6B20530DE600D10CED /* NYCHighSchoolsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NYCHighSchoolsViewController.swift; sourceTree = "<group>"; };
@@ -174,6 +180,7 @@
 				81A64DA320532CD600D10CED /* BoroughTableViewController.swift */,
 				81A64D6B20530DE600D10CED /* NYCHighSchoolsViewController.swift */,
 				81A64DB320538D3C00D10CED /* HSSATDetailsViewController.swift */,
+				816C8A8920549BAD00BB1169 /* BookmarksViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -192,6 +199,7 @@
 			children = (
 				81A64D9C2053252C00D10CED /* SATScores.swift */,
 				81A64D9A20530FC800D10CED /* NYCHighSchool.swift */,
+				816C8A87205496D700BB1169 /* SavedSchool.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -202,6 +210,7 @@
 				81A64D9720530E8200D10CED /* NetworkHelper.swift */,
 				81A64DAB205343BB00D10CED /* HighSchoolsAPIClient.swift */,
 				81A64DB120538A5500D10CED /* SATScoresAPIClient.swift */,
+				816C8A852054921600BB1169 /* PersistenceService.swift */,
 			);
 			name = Services;
 			sourceTree = "<group>";
@@ -533,9 +542,12 @@
 				81A64D9B20530FC800D10CED /* NYCHighSchool.swift in Sources */,
 				81A64DAC205343BB00D10CED /* HighSchoolsAPIClient.swift in Sources */,
 				81A64D6C20530DE600D10CED /* NYCHighSchoolsViewController.swift in Sources */,
+				816C8A862054921600BB1169 /* PersistenceService.swift in Sources */,
 				81A64DB220538A5500D10CED /* SATScoresAPIClient.swift in Sources */,
 				81A64DB420538D3C00D10CED /* HSSATDetailsViewController.swift in Sources */,
+				816C8A8A20549BAD00BB1169 /* BookmarksViewController.swift in Sources */,
 				81A64D9820530E8200D10CED /* NetworkHelper.swift in Sources */,
+				816C8A88205496D700BB1169 /* SavedSchool.swift in Sources */,
 				81A64DA920532E0300D10CED /* BoroughTableViewCell.swift in Sources */,
 				81A64D9D2053252C00D10CED /* SATScores.swift in Sources */,
 				81A64DA420532CD600D10CED /* BoroughTableViewController.swift in Sources */,

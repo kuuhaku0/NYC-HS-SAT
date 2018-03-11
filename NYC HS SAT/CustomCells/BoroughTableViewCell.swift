@@ -12,7 +12,6 @@ class BoroughTableViewCell: UITableViewCell {
     
     @IBOutlet weak var boroughImage: UIImageView!
     @IBOutlet weak var BoroughLabel: UILabel!
-    
 
     override func awakeFromNib() {
         super.awakeFromNib()

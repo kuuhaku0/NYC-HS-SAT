@@ -7,9 +7,11 @@
 //
 
 import UIKit
+import SVProgressHUD
 
 class HSSATDetailsViewController: UIViewController {
     // IBOutlets
+    @IBOutlet weak var bookmarkButton: UIButton!
     @IBOutlet weak var schoolNameLabel: UILabel!
     @IBOutlet weak var readingScoreLabel: UILabel!
     @IBOutlet weak var mathScoreLabel: UILabel!
@@ -20,13 +22,22 @@ class HSSATDetailsViewController: UIViewController {
         self.dismiss(animated: true, completion: nil)
     }
     @IBOutlet weak var totalTestTakersLabel: UILabel!
+    @IBAction func bookmarkButtonPressed(_ sender: UIButton) {
+        saveSchoolInfo()
+    }
     
-    public var selectedSchool: NYCHighSchool! {
+    // Properties
+    public var isDataFromSavedData = false
+    public var selectedSchoolFromSavedData: NYCHighSchool?
+    public var savedSATData: [SATScores]? // Being passed over from saved data, UI has not yet been loaded
+    public var selectedSchool: NYCHighSchool? {
         didSet {
-            loadData(for: selectedSchool!.dbn)
+            if isDataFromSavedData == false {
+                loadData(for: selectedSchool!.dbn)
+            }
         }
     }
-    private var satScores: [SATScores]? {
+    public var satScores: [SATScores]? { // Being set async, setup UI after satScores is set
         didSet {
             setupUI()
         }
@@ -34,25 +45,35 @@ class HSSATDetailsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        if satScores != nil { // setup UI if coming from
+            print("view did load")
+            setupUI()
+        }
     }
     
     private func setupUI() {
         // Display school name passed over
-        schoolNameLabel.text = selectedSchool.school_name.removeBadFormatString()
+        schoolNameLabel?.text
+            = selectedSchool?.school_name.removeBadFormatString() ??
+            selectedSchoolFromSavedData?.school_name.removeBadFormatString()
+        
+        // Hides bookmark button when loading from local saved data
+        if isDataFromSavedData == true {
+            bookmarkButton.isHidden = true
+        }
         
         // Displays SAT information based on if the result array is empty
-        if let result = satScores?.first { //not empty
-            readingScoreLabel.text = result.sat_critical_reading_avg_score
-            mathScoreLabel.text = result.sat_math_avg_score
-            writingScoreLabel.text = result.sat_writing_avg_score
+        if let result = satScores?.first ?? savedSATData?.first {
+            let readingScore = Int(result.sat_critical_reading_avg_score) ?? 0 // some of the results return "s"
+            let mathScore = Int(result.sat_math_avg_score) ?? 0
+            let writingScore = Int(result.sat_writing_avg_score) ?? 0
+            readingScoreLabel?.text = "\(readingScore)"
+            mathScoreLabel?.text = "\(mathScore)"
+            writingScoreLabel?.text = "\(writingScore)"
             
-            let total // total score out of 2100
-                = Int(result.sat_writing_avg_score)!
-                + Int(result.sat_math_avg_score)!
-                + Int(result.sat_critical_reading_avg_score)!
-            
-            totalScoreLabel.text = String(total) + " / 2100"
-            totalTestTakersLabel.text = "Number of test takers: \(result.num_of_sat_test_takers)"
+            let total = readingScore + mathScore + writingScore
+            totalScoreLabel?.text = String(total) + " / 2100"
+            totalTestTakersLabel?.text = "Number of test takers: \(result.num_of_sat_test_takers)"
             
         } else { // empty
             noResultsView.isHidden = false
@@ -61,8 +82,11 @@ class HSSATDetailsViewController: UIViewController {
     
     // Network call with SATScoresAPIClient
     private func loadData(for school: String) {
+        SVProgressHUD.show()
+        print("being called")
         let completion: ([SATScores]) -> Void = {(onlineSATScore) in
             self.satScores = onlineSATScore
+            SVProgressHUD.dismiss()
         }
         let error: (Error) -> Void = {(error) in
             self.showAlert(title: "Error", message: "Unable to load data, please check your network connection.")
@@ -77,5 +101,15 @@ class HSSATDetailsViewController: UIViewController {
         let okAction = UIAlertAction(title: "Ok", style: .default) { (alert) in }
         alertController.addAction(okAction)
         present(alertController, animated: true, completion: nil)
+    }
+    
+    // Stores school info locally
+    private func saveSchoolInfo() {
+        // Displays different alert if saved data for school already exist
+        if PersistenceService.manager.addToFavorites(school: self.selectedSchool!, satInfo: satScores ?? []) == true {
+            showAlert(title: "Success", message: "Bookmarked current school")
+        } else {
+            showAlert(title: "Error", message: "Already bookmarked")
+        }
     }
 }

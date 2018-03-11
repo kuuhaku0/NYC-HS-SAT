@@ -13,23 +13,22 @@ class NYCHighSchoolsViewController: UIViewController {
     // MARK: - IBOutlets
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var highSchoolsTableView: UITableView!
-
+    
     // MARK: - Properties
     private var selectedSearchSegment = 0
-    // Trigger for getting data for the selected borough
-    public var selectedBorough = ("", "") {
-        didSet {
-            navigationItem.title = selectedBorough.1
-            getAllHighSchools(from: selectedBorough.0)
-        }
-    }
-    
     private var nycHighSchools = [NYCHighSchool]()
     private var filteredResults = [NYCHighSchool]() {
         didSet {
             DispatchQueue.main.async {
                 self.highSchoolsTableView.reloadData()
             }
+        }
+    }
+    // Trigger for getting data for the selected borough
+    public var selectedBorough = ("", "") {
+        didSet {
+            navigationItem.title = selectedBorough.1
+            getAllHighSchools(from: selectedBorough.0)
         }
     }
     
@@ -51,7 +50,7 @@ class NYCHighSchoolsViewController: UIViewController {
         }
         // Show alert and dismiss loading indicator
         let error: (Error) -> Void = {(error) in
-            self.showAlert(title: "Error", message: error.localizedDescription)
+            self.showAlert(title: "Error", message: "Unable to load data, please check your network connection.")
             SVProgressHUD.dismiss()
         }
         HighSchoolsAPIClient.manager.getAllSchools(from: borough,
@@ -66,12 +65,12 @@ class NYCHighSchoolsViewController: UIViewController {
         present(alertController, animated: true, completion: nil)
     }
     
-    // prepare for segue
+    // Passes the information of selected high school when segueing
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let indexPath = highSchoolsTableView.indexPathForSelectedRow else {return}
-        
-        let destination = segue.destination as! HSSATDetailsViewController
-        destination.selectedSchool = nycHighSchools[indexPath.row]
+        if let destination = segue.destination as? HSSATDetailsViewController {
+            destination.selectedSchool = filteredResults[indexPath.row]
+        }
     }
 }
 
@@ -85,15 +84,15 @@ extension NYCHighSchoolsViewController: UITableViewDataSource {
     internal func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "HSCell", for: indexPath)
         let highSchool = filteredResults[indexPath.row]
-
+        
         // result has some weird characters
         if selectedSearchSegment == 0 {
             cell.textLabel?.text = highSchool.school_name.removeBadFormatString() //this hopefully fixes some
             cell.detailTextLabel?.text = highSchool.dbn
         }
-        else {
-            cell.textLabel?.text = highSchool.dbn.removeBadFormatString()
-            cell.detailTextLabel?.text = highSchool.school_name
+        else { // shows dbn first when searching by dbn
+            cell.textLabel?.text = highSchool.dbn
+            cell.detailTextLabel?.text = highSchool.school_name.removeBadFormatString()
         }
         return cell
     }
@@ -124,16 +123,16 @@ extension NYCHighSchoolsViewController: UISearchBarDelegate {
     internal func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         if searchBar.text?.count == 0 {
             filteredResults = nycHighSchools // Resets to display all schools in boro
-            DispatchQueue.main.async {
-                self.highSchoolsTableView.reloadData()
-            }
         } else { // Live filtering for result
             if selectedSearchSegment == 0 { // filter by school name
-                filteredResults = nycHighSchools.filter {$0.school_name.localizedCaseInsensitiveContains(searchBar.text!)}
+                filteredResults = nycHighSchools.filter{$0.school_name.localizedCaseInsensitiveContains(searchBar.text!)}
             } else { // filter by district borough number
-                filteredResults = nycHighSchools.filter {$0.dbn.localizedCaseInsensitiveContains(searchBar.text!)}
+                filteredResults = nycHighSchools.filter{$0.dbn.localizedCaseInsensitiveContains(searchBar.text!)}
             }
         }
+    }
+    internal func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        searchBar.resignFirstResponder()
     }
 }
 
