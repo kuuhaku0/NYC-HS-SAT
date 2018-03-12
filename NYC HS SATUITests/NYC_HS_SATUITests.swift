@@ -28,9 +28,18 @@ class NYC_HS_SATUITests: XCTestCase {
         super.tearDown()
     }
     
-    func testExample() {
-        // Use recording to get started writing UI tests.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    func testSelectBoro() {
+        let app = XCUIApplication()
+        let tablesQuery = app.tables
+        tablesQuery/*@START_MENU_TOKEN@*/.staticTexts["Manhattan"]/*[[".cells.staticTexts[\"Manhattan\"]",".staticTexts[\"Manhattan\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
+        app.navigationBars["Manhattan"].buttons["Back"].tap()
+        tablesQuery/*@START_MENU_TOKEN@*/.staticTexts["Brooklyn"]/*[[".cells.staticTexts[\"Brooklyn\"]",".staticTexts[\"Brooklyn\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
+        app.navigationBars["Brooklyn"].buttons["Back"].tap()
+        tablesQuery/*@START_MENU_TOKEN@*/.staticTexts["Queens"]/*[[".cells.staticTexts[\"Queens\"]",".staticTexts[\"Queens\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
+        app.navigationBars["Queens"].buttons["Back"].tap()
+        tablesQuery/*@START_MENU_TOKEN@*/.staticTexts["Bronx"]/*[[".cells.staticTexts[\"Bronx\"]",".staticTexts[\"Bronx\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
+        app.navigationBars["Bronx"].buttons["Back"].tap()
+        tablesQuery/*@START_MENU_TOKEN@*/.cells.containing(.image, identifier:"Staten Island")/*[[".cells.containing(.staticText, identifier:\"Staten Island\")",".cells.containing(.image, identifier:\"Staten Island\")"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.children(matching: .other).element(boundBy: 0).tap()
+        app.navigationBars["Staten Island"].buttons["Back"].tap()
     }
-    
 }

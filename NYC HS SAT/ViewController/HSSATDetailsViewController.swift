@@ -62,7 +62,6 @@ class HSSATDetailsViewController: UIViewController {
             bookmarkButton.isHidden = true
         }
         
-        // Displays SAT information based on if the result array is empty
         if let result = satScores?.first ?? savedSATData?.first {
             let readingScore = Int(result.sat_critical_reading_avg_score) ?? 0 // some of the results return "s"
             let mathScore = Int(result.sat_math_avg_score) ?? 0
@@ -76,7 +75,7 @@ class HSSATDetailsViewController: UIViewController {
             totalTestTakersLabel?.text = "Number of test takers: \(result.num_of_sat_test_takers)"
             
         } else { // empty
-            noResultsView.isHidden = false
+            noResultsView?.isHidden = false
         }
     }
     

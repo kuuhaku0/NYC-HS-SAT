@@ -20,7 +20,7 @@ class NYCHighSchoolsViewController: UIViewController {
     private var filteredResults = [NYCHighSchool]() {
         didSet {
             DispatchQueue.main.async {
-                self.highSchoolsTableView.reloadData()
+                self.highSchoolsTableView?.reloadData()
             }
         }
     }
@@ -39,6 +39,7 @@ class NYCHighSchoolsViewController: UIViewController {
     }
     
     // Function for network call
+    // Because the API doesn't return that many results per borough, it's safe to get all the data back all at once. However, it would be neccessary to query results if the data set is large.
     private func getAllHighSchools(from borough: String) {
         SVProgressHUD.show() //loading indicator
         
