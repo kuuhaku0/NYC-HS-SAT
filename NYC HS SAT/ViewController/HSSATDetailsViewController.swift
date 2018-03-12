@@ -72,7 +72,7 @@ class HSSATDetailsViewController: UIViewController {
             writingScoreLabel?.text = "\(writingScore)"
             
             let total = readingScore + mathScore + writingScore
-            totalScoreLabel?.text = String(total) + " / 2100"
+            totalScoreLabel?.text = String(total) + " / 2400"
             totalTestTakersLabel?.text = "Number of test takers: \(result.num_of_sat_test_takers)"
             
         } else { // empty
