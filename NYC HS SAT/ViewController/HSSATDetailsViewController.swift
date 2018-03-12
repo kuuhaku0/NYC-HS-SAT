@@ -51,6 +51,7 @@ class HSSATDetailsViewController: UIViewController {
         }
     }
     
+    // If I had more time, I would include a street view of the school and information about the school.
     private func setupUI() {
         // Display school name passed over
         schoolNameLabel?.text
@@ -89,6 +90,7 @@ class HSSATDetailsViewController: UIViewController {
         }
         let error: (Error) -> Void = {(error) in
             self.showAlert(title: "Error", message: "Unable to load data, please check your network connection.")
+            self.bookmarkButton.isEnabled = false
             SVProgressHUD.dismiss()
         }
         SATScoresAPIClient.manager.getSATScore(forSchool: school,

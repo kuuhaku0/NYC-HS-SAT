@@ -39,7 +39,7 @@ class NYCHighSchoolsViewController: UIViewController {
     }
     
     // Function for network call
-    // Because the API doesn't return that many results per borough, it's safe to get all the data back all at once. However, it would be neccessary to query results if the data set is large.
+    // Because the API doesn't return that many results per borough, it's safe to get all the data back all at once. However, it would be neccessary to limit results if the data set is large, and tail loading more results.
     private func getAllHighSchools(from borough: String) {
         SVProgressHUD.show() //loading indicator
         
@@ -139,6 +139,7 @@ extension NYCHighSchoolsViewController: UISearchBarDelegate {
 
 extension String { // Func for removing some strings from response data
     public func removeBadFormatString() -> String {
+        // Hardcoded approach since I only found these to appear in the data
         var str = self
         str = str.replacingOccurrences(of: "Â“47Â”", with: "")
             .replacingOccurrences(of: "Â", with: "")

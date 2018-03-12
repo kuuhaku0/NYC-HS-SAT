@@ -34,7 +34,7 @@ class BoroughTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        // Sizing the cells to fit inside safeAreaLayout
+        // Sizing the cells to fit inside safeAreaLayout height
         return view.safeAreaLayoutGuide.layoutFrame.height / CGFloat(boroughs.count)
     }
     
