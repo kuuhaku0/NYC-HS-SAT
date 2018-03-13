@@ -19,6 +19,7 @@ enum AppError: Error {
     case otherError(rawError: Error)
 }
 
+// Given more time I would definitely add a timeout after 10 seconds.
 struct NetworkHelper {
     private init() {}
     static let manager = NetworkHelper()
@@ -54,6 +55,7 @@ struct NetworkHelper {
     }
 }
 
+// didn't really get around to use but would use if google street view api was used.
 struct ImageAPIClient {
     private init() {}
     static let manager = ImageAPIClient()
