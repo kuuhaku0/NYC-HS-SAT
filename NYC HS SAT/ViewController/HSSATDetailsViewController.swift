@@ -11,6 +11,10 @@ import SVProgressHUD
 
 class HSSATDetailsViewController: UIViewController {
     // IBOutlets
+    @IBOutlet weak var dbnLabel: UILabel!
+    @IBOutlet weak var totalStudentsLabel: UILabel!
+    @IBOutlet weak var attendanceRate: UILabel!
+    @IBOutlet weak var addressLabel: UILabel!
     @IBOutlet weak var bookmarkButton: UIButton!
     @IBOutlet weak var schoolNameLabel: UILabel!
     @IBOutlet weak var readingScoreLabel: UILabel!
@@ -54,9 +58,18 @@ class HSSATDetailsViewController: UIViewController {
     // If I had more time, I would include a street view of the school and information about the school.
     private func setupUI() {
         // Display school name passed over
-        schoolNameLabel?.text
-            = selectedSchool?.school_name.removeBadFormatString() ??
-            selectedSchoolFromSavedData?.school_name.removeBadFormatString()
+        if let schoolResult = selectedSchool ?? selectedSchoolFromSavedData {
+            let attendancePercent = Double(schoolResult.attendance_rate) ?? 0
+            if attendancePercent == 0 {
+                attendanceRate?.text = "Attendance Rate: N/A"
+            } else {
+                attendanceRate?.text = "Attendance Rate: \(Int(attendancePercent * 100))%"
+            }
+            totalStudentsLabel?.text = "Total Students: \(schoolResult.total_students)"
+            schoolNameLabel?.text = schoolResult.school_name.removeBadFormatString()
+            addressLabel?.text = schoolResult.location.components(separatedBy: "(")[0]
+            dbnLabel?.text = "DBN: \(schoolResult.dbn)"
+        }
         
         // Hides bookmark button when loading from local saved data
         if isDataFromSavedData == true {
@@ -74,7 +87,6 @@ class HSSATDetailsViewController: UIViewController {
             let total = readingScore + mathScore + writingScore
             totalScoreLabel?.text = String(total) + " / 2400"
             totalTestTakersLabel?.text = "Number of test takers: \(result.num_of_sat_test_takers)"
-            
         } else { // empty
             noResultsView?.isHidden = false
         }

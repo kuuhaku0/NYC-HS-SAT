@@ -13,4 +13,6 @@ struct NYCHighSchool: Codable {
     let boro: String
     let location: String
     let school_name: String
+    let total_students: String
+    let attendance_rate: String
 }
